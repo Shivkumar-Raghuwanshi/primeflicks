@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PrimeFlicks
 
-## Getting Started
+PrimeFlicks is a modern web application designed to provide a seamless user experience for movie enthusiasts. 
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The application is built using the following technologies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js 14**: A React framework for building JavaScript applications.
+- **Atlas MongoDB**: A fully-managed cloud database service.
+- **TypeScript**: A statically typed superset of JavaScript that adds optional types.
+- **Prisma**: An open-source database toolkit.
+- **Recoil**: A state management library for React.
+- **Shadcn UI**: A UI library for building interactive user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Next.js Auth**: A zero-dependency authentication library for Next.js.
+- **TMDB API**: A popular API used for accessing movie, TV show, and cast data.
+- **Vercel for Deployment**: A cloud platform for static sites and Serverless Functions.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository to your local machine using `git clone https://github.com/Shivkumar-Raghuwanshi/primeflicks.git`.
+2. Install the necessary dependencies using `npm install`.
+3. Set up your environment variables in a `.env` file in the root of your project. You'll need to provide your API keys for the various services used in this project.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+DATABASE_URL=
+NEXT_PUBLIC_APP_URL=
+NEXTAUTH_JWT_SECRET = 
+NEXTAUTH_SECRET = 
+NEXTAUTH_URL = 
 
-## Learn More
+GOOGLE_CLIENT_ID = 
+GOOGLE_CLIENT_SECRET = 
 
-To learn more about Next.js, take a look at the following resources:
+GITHUB_ID = 
+GITHUB_SECRET = 
+NEXT_PUBLIC_APP_URL=
+NEXT_PUBLIC_API_KEY =
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Start the development server using `npm run dev`.
+2. Open your browser and navigate to `http://localhost:3000` to view the application.
+3. Explore the various features of Samarth AI, such as conversation, image generation, music generation, video generation, and code generation. You can generate prompts for each of these categories and see the results in real-time.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+Include information about the license here.
