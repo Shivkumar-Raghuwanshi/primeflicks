@@ -6,6 +6,9 @@ import { Movie } from "@/typings";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlayCircle, Info } from "lucide-react";
+import { movieState, modalState } from "@/atoms/modalAtoms";
+import { useRecoilState } from "recoil";
+import Modal from "@/components/Modal";
 
 interface BannerProps {
   netflixOriginals: Movie[];
@@ -13,8 +16,10 @@ interface BannerProps {
 
 const baseUrl: string = "https://image.tmdb.org/t/p/original";
 
-const Banner = ({ netflixOriginals = [] }: BannerProps) => {
-  const [movie, setMovie] = useState<Movie | null>(null);
+const Banner = ({ netflixOriginals}: BannerProps) => {
+  const [movie, setMovie] = useState<Movie[] >([]);
+  const [showModal, setShowModal] = useRecoilState(modalState);
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
 
   useEffect(() => {
     setMovie(
@@ -44,11 +49,21 @@ const Banner = ({ netflixOriginals = [] }: BannerProps) => {
             {movie?.overview}
           </p>
           <div className="flex gap-2">
-            <Button variant={"outline"} className="flex justify-center items-center gap-1 hover:bg-slate-300 text-black text-xs md:text-sm lg:text-lg">
+            <Button
+              variant={"outline"}
+              className="flex justify-center items-center gap-1 hover:bg-slate-300 text-black text-xs md:text-sm lg:text-lg"
+            >
               <PlayCircle className="w-6 h-6" />
               Play{" "}
             </Button>
-            <Button variant={"outline"} className="flex justify-center items-center gap-1 hover:bg-slate-300 text-black text-xs md:text-sm lg:text-lg">
+            <Button
+              variant={"outline"}
+              className="flex justify-center items-center gap-1 hover:bg-slate-300 text-black text-xs md:text-sm lg:text-lg"
+              onClick={() => {
+                setCurrentMovie(movie);
+                setShowModal(true);
+              }}
+            >
               <Info className="w-6 h-6" />
               More info{" "}
             </Button>
