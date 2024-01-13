@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../api/auth/[...nextauth]/options";
 import { RegisterForm } from "@/components/RegisterForm";
-import { redirect, useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 
 const RegisterPage = async () => {
   const session = await getServerSession(authOptions);
@@ -18,7 +18,7 @@ const RegisterPage = async () => {
           <div className="bg-slate-950 p-5 rounded-3xl w-full sm:w-auto md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/5 text-white">
             <RegisterForm />
             <div className="font-normal text-sm mt-5 text-center">
-              <Link href={"/login"}>
+              <Link href={"/auth/signin"}>
                 Already have an account {"  "}
                 <span className="underline">Login</span>
               </Link>

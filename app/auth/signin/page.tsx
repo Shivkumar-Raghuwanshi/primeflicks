@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
 import { LoginForm } from "@/components/LoginForm";
-import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { signIn } from "next-auth/react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { signIn, useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 
 const LoginPage = () => {
+    const {data:session} = useSession();
+    if (session) redirect("/home");
+
   return (
     <div
       className="relative bg-no-repeat bg-center bg-fixed bg-cover w-full h-full sm:h-screen"
@@ -21,20 +21,20 @@ const LoginPage = () => {
           {<LoginForm />}
           <div className="flex flex-row items-center gap-4 mt-8 justify-center">
             <div
-              onClick={() => signIn("google", { callbackUrl: "https://primeflicks.vercel.app/home" })}
+              onClick={() => signIn("google", { callbackUrl: "/home" })}
               className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
             >
               <FcGoogle size={32} />
             </div>
             <div
-              onClick={() => signIn("github", { callbackUrl: "https://primeflicks.vercel.app/home" })}
+              onClick={() => signIn("github", { callbackUrl: "/home" })}
               className="w-10 h-10 bg-black rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
             >
               <FaGithub size={40} />
             </div>
           </div>
           <div className="font-normal text-sm mt-5 text-center">
-            <Link href={"/register"}>
+            <Link href={"/auth/register"}>
               First time using Primeflicks{"  "}
               <span className="underline">Register</span>
             </Link>
