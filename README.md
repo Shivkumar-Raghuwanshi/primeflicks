@@ -1,5 +1,6 @@
 # PrimeFlicks
-
+Live Website: `https://primeflicks.vercel.app/`
+Github: `https://github.com/Shivkumar-Raghuwanshi/primeflicks.git`
 PrimeFlicks is a modern web application designed to provide a seamless user experience for movie enthusiasts. 
 
 ## Tech Stack
