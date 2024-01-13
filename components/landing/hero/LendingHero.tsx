@@ -21,7 +21,7 @@ const LandingHero = () => {
           placeholder="Enter your email"
           className="bg-transparent/50 text-white w-full sm:w-72 md:w-96 h-14"
         />
-        <Link href="/register">
+        <Link href="/auth/register">
           <Button
             variant={"default"}
             className="bg-yellow-500 hover:bg-yellow-600 text-black h-14 text-sm sm:text-md md:text-lg lg:text-xl"

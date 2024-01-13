@@ -41,7 +41,7 @@ const FrequentQuestions = () => {
             placeholder="Enter your email"
             className="bg-transparent/50 text-white md:h-14"
           />
-          <Link href="/register">
+          <Link href="/auth/register">
             <Button
               variant={"default"}
               className="bg-yellow-500 hover:bg-yellow-600 text-black w-full md:h-14 text-sm md:text-lg lg:text-xl"
