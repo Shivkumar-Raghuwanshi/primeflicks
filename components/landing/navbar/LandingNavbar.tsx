@@ -30,7 +30,7 @@ const LandingNavbar = () => {
             </Select>
           </div>
 
-          <Link href="/login">
+          <Link href="/auth/signin">
             <Button variant="primary" className="rounded-xl">
               Sign in
             </Button>
