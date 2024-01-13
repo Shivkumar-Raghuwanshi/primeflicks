@@ -45,7 +45,7 @@ const Banner = ({ netflixOriginals}: BannerProps) => {
           <h1 className="text-xl font-bold md:text-3xl lg:text-5xl">
             {movie?.title || movie?.name || movie?.original_name}
           </h1>
-          <p className="max-w-xs text-xs md:max-w-lg md:text-lg">
+          <p className="max-w-xs line-clamp-4 text-xs md:max-w-lg md:text-lg">
             {movie?.overview}
           </p>
           <div className="flex gap-2">
