@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-4 py-4 lg:hidden inset-y-0">
           <Sidebar />
           <div className="flex gap-2 justify-center items-center">
-            <Input type="text" placeholder="Search" className="h-8" />
+            {/* <Input type="text" placeholder="Search" className="hidden h-8 " /> */}
             <User />
           </div>
         </div>

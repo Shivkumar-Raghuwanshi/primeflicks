@@ -18,9 +18,9 @@ const Row = ({ title, movies }: RowProps) => {
         <h1 className="text-white font-semibold text-sm md:text-lg lg:text-xl py-2">
           {title}
         </h1>
-        <CarouselContent className="h-28 max-w-[180px] md:h-36 md:max-w-[280px] md:hover:scale-105 pl-[1] ">
+        <CarouselContent className="h-28 max-w-[180px] md:h-36 md:max-w-[280px] md:hover:scale-105">
           {movies.map((movie) => (
-            <CarouselItem key={movie.id}>
+            <CarouselItem key={movie.id} className="m-0.5">
               <Thumbnails movie={movie} />
             </CarouselItem>
           ))}

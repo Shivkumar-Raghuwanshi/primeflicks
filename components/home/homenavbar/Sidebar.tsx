@@ -57,7 +57,7 @@ const socialItems = [
   {
     id: 1,
     icon: Facebook,
-    iconColor: "text-blue-500",
+    iconColor: "bg-blue-700 text-white",
     link: "/",
   },
   {
@@ -69,13 +69,13 @@ const socialItems = [
   {
     id: 3,
     icon: LinkedinIcon,
-    iconColor: "text-blue-700",
+    iconColor: "bg-blue-700 text-white",
     link: "/",
   },
   {
     id: 4,
     icon: GithubIcon,
-    iconColor: "text-white",
+    iconColor: "bg-fill-white",
     link: "/",
   },
 ];
@@ -133,7 +133,7 @@ const Sidebar = () => {
               {socialItems.map((social) => (
                 <Link href={social.link} target="_blank" key={social.id}>
                   <social.icon
-                    className={cn("w-5 h-5 gap-2 p-1", social.iconColor)}
+                    className={cn("w-8 h-8 fill-white gap-2 p-1", social.iconColor)}
                   />
                 </Link>
               ))}
