@@ -41,7 +41,6 @@ NEXT_PUBLIC_API_KEY =
 
 1. Start the development server using `npm run dev`.
 2. Open your browser and navigate to `http://localhost:3000` to view the application.
-3. Explore the various features of Samarth AI, such as conversation, image generation, music generation, video generation, and code generation. You can generate prompts for each of these categories and see the results in real-time.
 
 ## Contributing
 
