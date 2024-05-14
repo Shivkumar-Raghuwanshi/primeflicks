@@ -3,6 +3,10 @@ Live Website: `https://primeflicks.vercel.app/`
 Github: `https://github.com/Shivkumar-Raghuwanshi/primeflicks.git`
 PrimeFlicks is a modern web application designed to provide a seamless user experience for movie enthusiasts. 
 
+## Watch the video by clicking on the thumbnail below:
+
+[![YouTube Video Thumbnail](https://img.youtube.com/vi/QFozO73uOps/maxresdefault.jpg)](https://www.youtube.com/embed/QFozO73uOps?si=1kvnzt7J2mGDKvyR)
+
 ## Tech Stack
 
 The application is built using the following technologies:
